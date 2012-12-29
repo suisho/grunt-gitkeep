@@ -1,0 +1,25 @@
+{
+  "name": "emptykeep",
+  "version": "0.0.3",
+  "description": "Create keep file (default is .gitkeep) file to empty directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": "git://github.com/suisho/node-emptykeep.git",
+  "author": "suisho",
+  "license": "BSD",
+  "devDependencies": {
+    "mocha": "~1.7.4",
+    "grunt-simple-mocha": "~0.3.1",
+    "grunt-contrib-watch": "~0.1.4",
+    "fs-extra": "~0.3.2",
+    "jshint": "~0.9.1",
+    "grunt-contrib-jshint": "~0.1.0"
+  },
+  "dependencies": {
+    "clone": "~0.1.5",
+    "glob": "~3.1.14",
+    "touch": "0.0.2"
+  }
+}
