@@ -11,5 +11,9 @@
   "license": "BSD",
   "devDependencies": {
     "grunt": "~0.3.17"
+  },
+  "dependencies": {
+    "emptykeep": "0.0.3",
+    "grunt-contrib": "~0.3.0"
   }
 }
