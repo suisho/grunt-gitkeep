@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "ERROR: No README.md file found!",
   "main": "index.js",
+  "keyword" : ["grunt", "gitkeep", "git"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +11,9 @@
   "author": "",
   "license": "BSD",
   "devDependencies": {
-    "grunt": "~0.3.17"
+    "grunt": "~0.4",
+    "touch": "0.0.2",
+    "emptykeep": "git@github.com:suisho/grunt-gitkeep.git",
   },
   "dependencies": {
     "emptykeep": "0.0.3",
