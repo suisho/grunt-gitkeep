@@ -1,6 +1,6 @@
 {
   "name": "grunt-gitkeep",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ERROR: No README.md file found!",
   "main": "index.js",
   "keyword": [
@@ -21,6 +21,6 @@
     "grunt-contrib-clean": "~0.4.0a"
   },
   "dependencies": {
-    "emptykeep": "0.0.3"
+    "emptykeep": "~0.0.3"
   }
 }
