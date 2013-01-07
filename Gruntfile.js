@@ -18,7 +18,6 @@ function _assert(dir, name){
   assert.ok(!fs.existsSync(path.join(dir,'/not_empty/'+name)))
   assert.ok(fs.existsSync(path.join(dir, '/tree/tree/empty/'+name)))
   assert.ok(!fs.existsSync(path.join(dir,'/tree/tree/not_empty/'+name)))
-
 }
 module.exports = function(grunt){
   grunt.initConfig({
@@ -30,11 +29,12 @@ module.exports = function(grunt){
       }
     },
     clean: {
-      test: ['tmp/short', 'tmp/long', 'tmp/opt']
+      test: ['tmp/short', 'tmp/long', 'tmp/opt', 'tmp/multi1','tmp/multi2']
     },
     gitkeep : {
       short : ['tmp/short'],
       long : ['tmp/long'],
+      multi : ['tmp/multi1','tmp/multi2'],
       opt: {
         src : ['tmp/opt'],
         options : {
@@ -50,12 +50,16 @@ module.exports = function(grunt){
     _setup('tmp/short')
     _setup('tmp/long')
     _setup('tmp/opt')
+    _setup('tmp/multi1')
+    _setup('tmp/multi2')
   });
   grunt.registerTask('assert', function(){
     try{
       _assert('tmp/short')
       _assert('tmp/long')
       _assert('tmp/opt', 'keepme')
+      _assert('tmp/multi1')
+      _assert('tmp/multi2')
     }catch(e){
       grunt.fatal(e)
     }
