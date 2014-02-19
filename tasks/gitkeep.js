@@ -8,17 +8,22 @@ module.exports = function(grunt){
     // TODO: ditch this when grunt v0.4 is released
     grunt.util = grunt.util || grunt.utils;
     var done = this.async();
-    var files = this.file.src;
-    grunt.util.async.forEachSeries(files, function(filePath, next){
-      emptykeep(filePath, option, function(err){
-        if(err){
-          grunt.warn(err)
-          done();
-        }
+    grunt.util.async.forEachSeries(this.files, function(f, next){
+      var files = f.src
+      grunt.util.async.forEachSeries(files, function(file, nextFile){
+        emptykeep(file, option, function(err){
+          if(err){
+            grunt.warn(err)
+            done();
+          }
+          nextFile()
+        })
+      }, function(){
         next()
       })
     }, function(){
       done()
     })
+
   })
 };

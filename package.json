@@ -17,10 +17,10 @@
   "devDependencies": {
     "grunt": "~0.4",
     "touch": "0.0.2",
-    "grunt-contrib": "~0.3",
-    "grunt-contrib-clean": "~0.4.0a"
+    "grunt-contrib-clean": "~0.4.0a",
+    "fs-extra": "~0.8.1"
   },
   "dependencies": {
-    "emptykeep": "~0.0.3"
+    "emptykeep": "0.0.6"
   }
 }
