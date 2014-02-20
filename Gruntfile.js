@@ -33,9 +33,11 @@ module.exports = function(grunt){
     },
     gitkeep : {
       short : ['tmp/short'],
-      long : ['tmp/long'],
+      long : { // not recommend usage
+        src : ['tmp/long']
+      },
       multi : ['tmp/multi1','tmp/multi2'],
-      opt: {
+      custom_name: {
         src : ['tmp/opt'],
         options : {
           keepFileName : 'keepme'
