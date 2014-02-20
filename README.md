@@ -34,7 +34,7 @@ gitkeep : {
 
 - Multiple directory
 
-```
+```js
 gitkeep : {
   multi : ['tmp/multi1','tmp/multi2']
 }
@@ -42,7 +42,7 @@ gitkeep : {
 
 - Create custom name
 
-```
+```js
 custom_name: {
   src : ['tmp/opt'],
   options : {
